@@ -1,0 +1,15 @@
+.map {
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    position: relative;
+    margin: 0 auto;
+}
+
+#state-list {
+    justify-content: center;
+}
+
+input {
+    display: none;
+}
