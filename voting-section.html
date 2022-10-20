@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting-section-new</title>
+    <link rel="stylesheet" href="./voting-section-style.css">
+    <link rel="stylesheet" href="./map.css">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <script src="mapdata.js"></script>
+    <script src="usmap.js"></script>
+    <script src="select_function.js"></script>
+    <script src="progress_bar.js"></script>
+    <script src="state_color.js"></script>
+    <script src="description.js"></script>
+</head>
+
+<body onload="helperFunc(stateColor, description)">
+
+    <div class="wrapper">
+
+        <div class="map" style="max-width: 600px">
+            <div id="map"></div>
+        </div>
+
+        <div class="upper">
+            <img class="Edward-picture" src="./images/Edward.jpg" alt="">
+            <div class="progress-bar" id="total-bar">
+                <div id="edwards-bar"
+                    style="background-color: black;height: 30px;line-height: 30px; color: white; font-weight: bold; flex: 3;">
+                    60 votes</div>
+                <div id="elons-bar"
+                    style="background-color: brown;height: 30px;line-height: 30px; color: white; font-weight: bold; flex: 2;">
+                    40 votes</div>
+            </div>
+            <img class="Elon-picture" src="./images/elon musk.jpg" alt="">
+        </div>
+
+        <div class="container">
+            <h3>MAKE YOUR VOTE COUNT</h3>
+            <form class="forms">
+                <div id="state-list">
+                    <label class="state-select-text" for="states">Select your state: </label>
+                    <select name="states" id="states">
+                        <option value="Alabama">Alabama</option>
+                        <option value="Alaska">Alaska</option>
+                        <option value="American Samoa">American Samoa</option>
+                        <option value="Arizona">Arizona</option>
+                        <option value="Arkansas">Arkansas</option>
+                        <option value="California">California</option>
+                        <option value="Colorado">Colorado</option>
+                        <option value="Connecticut">Connecticut</option>
+                        <option value="Delaware">Delaware</option>
+                        <option value="District of Columbia">District of Columbia</option>
+                        <option value="Florida">Florida</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Guam">Guam</option>
+                        <option value="Hawaii">Hawaii</option>
+                        <option value="Idaho">Idaho</option>
+                        <option value="Illinois">Illinois</option>
+                        <option value="Indiana">Indiana</option>
+                        <option value="Iowa">Iowa</option>
+                        <option value="Kansas">Kansas</option>
+                        <option value="Kentucky">Kentucky</option>
+                        <option value="Louisiana">Louisiana</option>
+                        <option value="Maine">Maine</option>
+                        <option value="Maryland">Maryland</option>
+                        <option value="Massachusetts">Massachusetts</option>
+                        <option value="Michigan">Michigan</option>
+                        <option value="Minnesota">Minnesota</option>
+                        <option value="Mississippi">Mississippi</option>
+                        <option value="Missouri">Missouri</option>
+                        <option value="Montana">Montana</option>
+                        <option value="Nebraska">Nebraska</option>
+                        <option value="Nevada">Nevada</option>
+                        <option value="New Hampshire">New Hampshire</option>
+                        <option value="New Jersey">New Jersey</option>
+                        <option value="New Mexico">New Mexico</option>
+                        <option value="New York">New York</option>
+                        <option value="North Carolina">North Carolina</option>
+                        <option value="North Dakota">North Dakota</option>
+                        <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                        <option value="Ohio">Ohio</option>
+                        <option value="Oklahoma">Oklahoma</option>
+                        <option value="Oregon">Oregon</option>
+                        <option value="Pennsylvania">Pennsylvania</option>
+                        <option value="Puerto Rico">Puerto Rico</option>
+                        <option value="Rhode Island">Rhode Island</option>
+                        <option value="South Carolina">South Carolina</option>
+                        <option value="South Dakota">South Dakota</option>
+                        <option value="Tennessee">Tennessee</option>
+                        <option value="Texas">Texas</option>
+                        <option value="Utah">Utah</option>
+                        <option value="Vermont">Vermont</option>
+                        <option value="Virginia">Virginia</option>
+                        <option value="Virgin Islands">Virgin Islands</option>
+                        <option value="Washington">Washington</option>
+                        <option value="West Virginia">West Virginia</option>
+                        <option value="Wisconsin">Wisconsin</option>
+                        <option value="Wyoming">Wyoming</option>
+                    </select>
+                </div>
+
+                <div class="icons">
+                    <label for="edward" id="edwardSelect"><img onclick="select('edwardSelect')" id="ed" class="Edward"
+                            src="./images/Edward.jpg" alt="Edward"><input type="radio" id="edward" value="1"
+                            name="pick"></label>
+
+                    <label for="elon" id="elonSelect"><img onclick="select('elonSelect')" id="el" class="Elon-Musk"
+                            src="./images/elon musk.jpg" alt="Elon"><input type="radio" id="elon" value="1"
+                            name="pick"></label>
+                </div>
+
+                <div>
+                    <button class="vote-button" type="button" onclick="handleVote()">VOTE</button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
